@@ -30,7 +30,7 @@ pub const Audio = struct {
         return AudioStream(format).init(self._allocator, options);
     }
 
-    pub fn sleep(_: *const Self, ms: c_long) void {
+    pub fn sleep(_: *const Self, ms: u32) void {
         PA.Pa_Sleep(ms);
     }
 
